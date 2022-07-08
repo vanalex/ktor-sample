@@ -1,5 +1,7 @@
 package com.example.plugins
 
+import com.example.models.customerStorage
+import com.example.routes.customerRouting
 import io.ktor.server.routing.*
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -12,5 +14,6 @@ fun Application.configureRouting() {
         get("/") {
             call.respondText("Hello World!")
         }
+        customerRouting()
     }
 }
